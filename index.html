@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema de Notas</title>
+
+
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- css do entrosa e do resenhudo 67 -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+
+<body>
+    <!-- menu de navegação -->
+
+    <nav class="navbar navbar-expand-lg my-4">
+        <div class="container">
+            <a class="navbar-brand title-size" href="#"><i class="bi bi-robot me-1"></i>SisNotas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-text-indent-right"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Cadastrar Notas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resumo de Notas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Alunos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Conta
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"data-bs-toggle="modal" data-bs-target="#loginModal">Fazer Login</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Criar Conta</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Contato</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- MODAL DE LOGIN -->
+
+
+
+<!-- Modal -->
+ 
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <main class="container">
+        <h3 class="display-6">Cadastro de Notas</h3>
+
+
+
+        <form id="form-notas" name="form-notas" method="get" action="">
+            <div class="row">
+                <section class="my-3 col-md-6">
+                    <label for="nome-aluno" class="form-label">Nome do aluno</label>
+                    <input type="text" id="nome-aluno" name="nome-aluno" class="form-control"
+                        placeholder="Exemplo: Vallentia Pires" minlength="10" maxlength="50" required>
+                </section>
+
+                <section class="my-3 col-md-6">
+                    <label for="disciplina" class="form-label">Disciplina</label>
+                    <select name="disciplina" id="disciplina" class="form-select">
+                        <option value="" disabled selected>Selecione a Disciplina</option>
+                        <option value="Matemática">Matemática</option>
+                        <option value="Física">Física</option>
+                        <option value="Química">Química</option>
+                        <option value="Programação Web">Programação Web</option>
+                        <option value="Frameworks">Frameworks</option>
+                        <option value="Web Design">Web Design </option>
+                        <option value="Língua portuguesa">Língua portuguesa</option>
+
+                    </select>
+                </section>
+
+                <section class="my-3 col-md-6">
+                    <label for="nota1" class="form-label">Nota 1</label>
+                    <input type="text" id="nota1" name="nota1" class="form-control" required minlength="1" maxlength="4"
+                        placeholder="EX: 10.0">
+                </section>
+
+                <section class="my-3 col-md-6">
+                    <label for="nota2" class="form-label">Nota 2</label>
+                    <input type="text" id="nota2" name="nota2" class="form-control" required minlength="1" maxlength="4"
+                        placeholder="EX: 10.0">
+                </section>
+
+                <section class="my-3 col-md-6">
+                    <label for="nota3" class="form-label">Nota 3</label>
+                    <input type="text" id="nota3" name="nota3" class="form-control" required minlength="1" maxlength="4"
+                        placeholder="EX: 10.0">
+                </section>
+
+                <section class="my-3 col-md-6">
+                    <label for="nota4" class="form-label">Nota 4</label>
+                    <input type="text" id="nota4" name="nota4" class="form-control" required minlength="1" maxlength="4"
+                        placeholder="EX: 10.0">
+                </section>
+
+                <section class="my-5 d-flex justify-content-end">
+                    <button type="submit" class="btn btn-danger">Calcular Notas</button>
+                </section>
+            </div>
+        </form>
+
+        <h3 class="display-6 mb-4">Resumo de Notas</h3>
+        <div class="table-responsive">
+
+            <table class="table text-center">
+
+                <thead class="table-dark"> <!--cabeçalho-->
+                    <tr>
+                        <th>Aluno</th>
+                        <th>Disciplina</th>
+                        <th>Nota1</th>
+                        <th>Nota2</th>
+                        <th>Nota3</th>
+                        <th>Nota4</th>
+                        <th>Média</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+
+                <tbody id="dados-notas"></tbody> <!--corpo-->
+
+                <tfoot> <!--rodapé-->
+                    <tr>
+                        <td colspan="8">Dados atualizados em: </td>
+                    </tr>
+                </tfoot>
+
+
+            </table>
+        </div>
+
+        <h3 class="display-6 mb-4">Alunos em destaque</h3>
+
+        <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 my-4">
+            <div class="card my-3">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Neymar JR</h5>
+                    <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
+                    <div class="my-5 d-flex justify-content-center"> 
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-youtube"></i></a>
+                    </div>
+                    <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+            <div class="card my-3">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Neymar JR</h5>
+                    <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
+                    <div class="my-5 d-flex justify-content-center"> 
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-youtube"></i></a>
+                    </div>
+                    <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+            <div class="card my-3">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Neymar JR</h5>
+                    <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
+                    <div class="my-5 d-flex justify-content-center"> 
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-youtube"></i></a>
+                    </div>
+                    <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+            <div class="card my-3">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Neymar JR</h5>
+                    <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
+                    <div class="my-5 d-flex justify-content-center"> 
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-youtube"></i></a>
+                    </div>
+                    <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+            <div class="card my-3">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Neymar JR</h5>
+                    <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
+                    <div class="my-5 d-flex justify-content-center"> 
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-youtube"></i></a>
+                    </div>
+                    <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+            <div class="card my-3">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Neymar JR</h5>
+                    <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
+                    <div class="my-5 d-flex justify-content-center"> 
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-youtube"></i></a>
+                    </div>
+                    <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+            <div class="card my-3">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Neymar JR</h5>
+                    <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
+                    <div class="my-5">
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-youtube"></i></a>
+                    </div>
+                    <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+            <div class="card my-3">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Neymar JR</h5>
+                    <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
+                    <div class="my-5">
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-youtube"></i></a>
+                    </div>
+                    <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+            <div class="card my-3">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Neymar JR</h5>
+                    <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
+                    <div class="my-5">
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-youtube"></i></a>
+                    </div>
+                    <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+        </section>
+
+       
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+        <script src="./js/gravarusuario.js"></script>
+</body>
+
+</html>
