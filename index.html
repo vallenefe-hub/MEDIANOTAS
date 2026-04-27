@@ -50,7 +50,8 @@
                             Conta
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"data-bs-toggle="modal" data-bs-target="#loginModal">Fazer Login</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#loginModal">Fazer Login</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -70,25 +71,25 @@
 
 
 
-<!-- Modal -->
- 
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    <!-- Modal -->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 
     <main class="container">
@@ -121,26 +122,26 @@
 
                 <section class="my-3 col-md-6">
                     <label for="nota1" class="form-label">Nota 1</label>
-                    <input type="text" id="nota1" name="nota1" class="form-control" required minlength="1" maxlength="4"
-                        placeholder="EX: 10.0">
+                    <input type="text" id="nota1" name="nota1" class="form-control nota" required minlength="1" maxlength="4"
+                        placeholder="EX: 10.0 " min="0" max="10">
                 </section>
 
                 <section class="my-3 col-md-6">
                     <label for="nota2" class="form-label">Nota 2</label>
-                    <input type="text" id="nota2" name="nota2" class="form-control" required minlength="1" maxlength="4"
-                        placeholder="EX: 10.0">
+                    <input type="text" id="nota2" name="nota2" class="form-control nota" required minlength="1" maxlength="4"
+                        placeholder="EX: 10.0 " min="0" max="10">
                 </section>
 
                 <section class="my-3 col-md-6">
                     <label for="nota3" class="form-label">Nota 3</label>
-                    <input type="text" id="nota3" name="nota3" class="form-control" required minlength="1" maxlength="4"
-                        placeholder="EX: 10.0">
+                    <input type="text" id="nota3" name="nota3" class="form-control nota" required minlength="1" maxlength="4"
+                        placeholder="EX: 10.0 " min="0" max="10">
                 </section>
 
                 <section class="my-3 col-md-6">
                     <label for="nota4" class="form-label">Nota 4</label>
-                    <input type="text" id="nota4" name="nota4" class="form-control" required minlength="1" maxlength="4"
-                        placeholder="EX: 10.0">
+                    <input type="text" id="nota4" name="nota4" class="form-control nota" required minlength="1" maxlength="4"
+                        placeholder="EX: 10.0 " min="0" max="10">
                 </section>
 
                 <section class="my-5 d-flex justify-content-end">
@@ -171,7 +172,7 @@
 
                 <tfoot> <!--rodapé-->
                     <tr>
-                        <td colspan="8">Dados atualizados em: </td>
+                        <td colspan="8">Dados atualizados em: <span id="data"></span></td>
                     </tr>
                 </tfoot>
 
@@ -183,11 +184,11 @@
 
         <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 my-4">
             <div class="card my-3">
-                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno FIUK codando">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Neymar JR</h5>
+                    <h5 class="card-title">FIUK</h5>
                     <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
-                    <div class="my-5 d-flex justify-content-center"> 
+                    <div class="my-5 d-flex justify-content-center">
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
@@ -198,11 +199,11 @@
                 </div>
             </div>
             <div class="card my-3">
-                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno FIUK codando">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Neymar JR</h5>
+                    <h5 class="card-title">FIUK</h5>
                     <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
-                    <div class="my-5 d-flex justify-content-center"> 
+                    <div class="my-5 d-flex justify-content-center">
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
@@ -213,11 +214,11 @@
                 </div>
             </div>
             <div class="card my-3">
-                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno FIUK codando">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Neymar JR</h5>
+                    <h5 class="card-title">FIUK</h5>
                     <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
-                    <div class="my-5 d-flex justify-content-center"> 
+                    <div class="my-5 d-flex justify-content-center">
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
@@ -228,11 +229,11 @@
                 </div>
             </div>
             <div class="card my-3">
-                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno FIUK codando">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Neymar JR</h5>
+                    <h5 class="card-title">FIUK</h5>
                     <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
-                    <div class="my-5 d-flex justify-content-center"> 
+                    <div class="my-5 d-flex justify-content-center">
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
@@ -243,11 +244,11 @@
                 </div>
             </div>
             <div class="card my-3">
-                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno FIUK codando">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Neymar JR</h5>
+                    <h5 class="card-title">FIUK</h5>
                     <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
-                    <div class="my-5 d-flex justify-content-center"> 
+                    <div class="my-5 d-flex justify-content-center">
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
@@ -258,11 +259,11 @@
                 </div>
             </div>
             <div class="card my-3">
-                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno FIUK codando">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Neymar JR</h5>
+                    <h5 class="card-title">FIUK</h5>
                     <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
-                    <div class="my-5 d-flex justify-content-center"> 
+                    <div class="my-5 d-flex justify-content-center">
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
@@ -273,24 +274,9 @@
                 </div>
             </div>
             <div class="card my-3">
-                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno FIUK codando">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Neymar JR</h5>
-                    <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
-                    <div class="my-5">
-                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
-                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
-                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
-                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-dribbble"></i></a>
-                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-youtube"></i></a>
-                    </div>
-                    <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
-                </div>
-            </div>
-            <div class="card my-3">
-                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Neymar JR</h5>
+                    <h5 class="card-title">FIUK</h5>
                     <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
                     <div class="my-5">
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
@@ -303,9 +289,24 @@
                 </div>
             </div>
             <div class="card my-3">
-                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno Neymar JR codando">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno FIUK codando">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Neymar JR</h5>
+                    <h5 class="card-title">FIUK</h5>
+                    <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
+                    <div class="my-5">
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-youtube"></i></a>
+                    </div>
+                    <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+            <div class="card my-3">
+                <img src="./images/foto.jpg" class="card-img-top" alt="foto do aluno FIUK codando">
+                <div class="card-body text-center">
+                    <h5 class="card-title">FIUK</h5>
                     <p class="card-text">Aula de Ti, do Israel, Frameworks</p>
                     <div class="my-5">
                         <a href=""><i class="fs-4 mx-2 border p-2 bg-dark rounded text-light bi bi-instagram"></i></a>
@@ -319,7 +320,11 @@
             </div>
         </section>
 
-       
+
+
+
+
+
 
     </main>
 
@@ -328,7 +333,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-        <script src="./js/gravarusuario.js"></script>
+    <script src="./js/gravarusuario.js"></script>
 </body>
 
 </html>
